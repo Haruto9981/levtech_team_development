@@ -33,8 +33,8 @@ class UserController extends Controller{
         return redirect('/home/'. $user->id);
     }
 
-    public function show(User $user)
+    public function show(User $user, Post $post)
     {
-        return view('users/show')->with(['user' => $user]);
+        return view('users/show')->with(['user' => $user, 'posts' => $user->getByPosts()]);
     }
 }

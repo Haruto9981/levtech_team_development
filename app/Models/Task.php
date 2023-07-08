@@ -22,4 +22,8 @@ class Task extends Model
     {
         return $this->belongsTo(Task::class);
     }
+    public function getByPost()
+    {
+        return $this::with('post')->orderBy('updated_at', 'DESC');
+    }
 }

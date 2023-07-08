@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('volume');
             $table->date('line');
-            $table->date('deadline');
-            $table->string('achievement');
-            $table->foreignId('posts_id')->constrained();
+            $table->date('deadline')->nullable();
+            $table->boolean('achievement')->default(false);
+            $table->foreignId('post_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
-             $table->softDeletes();
+            $table->softDeletes();
         });
     }
 
