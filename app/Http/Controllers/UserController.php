@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Task;
@@ -10,10 +11,12 @@ use App\Models\Task;
 class UserController extends Controller{
 
     public function create(User $user){
+        $user = Auth::user();
+        
         //期間設定をしているならHOMEに飛ぶ条件分岐が必要
-        if (user[period_start] == NULL)
+        if ($user->period_start == NULL)
         {
-            return view('users/create');
+            return view('users/create')->with(['user' => $user]);
         }
         else 
         {
@@ -23,7 +26,10 @@ class UserController extends Controller{
     
     public function store_period(User $user, Request $request){
         $input = $request['user'];
-        $user->fill($input)->save();
+        $user->period_start = $input['period_start'];
+        $user->period_end = $input['period_end'];
+        $user->save();
+        
         return redirect('/home/'. $user->id);
     }
 

@@ -9,12 +9,10 @@
     <body>
         <h1>夏休み期間の設定</h1>
         <div class="content">
-            <form action="/summer/date" method="post">
+            <form action="/create/{{ $user->id }}" method="post">
                 @csrf
+                @method('put')
                 <div class="form-group">
-                    <input type="text" name="user[name]">
-                    <input type="text" name="user[email]">
-                    <input type="text" name="user[password]">
                     <label for="date2" class="col-form-label">日にちを入力</label>
                     <input type="date" class="form-control" id="date2" name="user[period_start]">
                 </div>
