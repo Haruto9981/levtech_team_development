@@ -14,7 +14,7 @@ class Task extends Model
         'volume',
         'line',
         'deadline',
-        'achivement',
+      　'achivement',
         'post_id',
     ];
 }
