@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', [PostController::class, 'home']);
+Route::get('/home/{user}', [PostController::class, 'home']);
 Route::post('/posts',  [PostController::class, 'store']);
 Route::get('/posts/create',  [PostController::class, 'create']);
 Route::get('/posts/{post}',  [PostController::class, 'show']);
