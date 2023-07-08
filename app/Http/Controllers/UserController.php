@@ -9,8 +9,16 @@ use App\Models\Task;
 
 class UserController extends Controller{
 
-    public function create(){
-        return view('users/create');
+    public function create(User $user){
+        //期間設定をしているならHOMEに飛ぶ条件分岐が必要
+        if (user[period_start] == NULL)
+        {
+            return view('users/create');
+        }
+        else 
+        {
+            return redirect('/home/'. $user->id); 
+        }
     }
     
     public function store_period(User $user, Request $request){
