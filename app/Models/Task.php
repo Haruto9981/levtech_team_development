@@ -14,7 +14,12 @@ class Task extends Model
         'volume',
         'line',
         'deadline',
-      　'achivement',
+        'achivemnt',
         'post_id',
     ];
+    
+    public function post()
+    {
+        return $this->belongsTo(Task::class);
+    }
 }
