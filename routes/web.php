@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +24,7 @@ Route::put('/posts/{post}',  [PostController::class, 'update']);
 Route::delete('/posts/{post}',  [PostController::class, 'delete']);
 Route::get('/posts/{post}/edit',  [PostController::class, 'edit']);
 Route::get('/categories/{category}', [CategoryController::class,'index']);
+Route::get('/', [UserController::class, 'create']);
 Route::get('/posts/show/{user}', [UserController::class, 'index']);
+Route::post('/summer/date', [UserController::class, 'store_period']);
 
