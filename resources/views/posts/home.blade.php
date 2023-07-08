@@ -26,5 +26,9 @@
             <h2>ビジターの行事</h2>
             <a href='/posts/show'>表示</a>
         </div>
+        <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <input type="submit" value="ログアウト">
+        </form>
     </body>
 </html>
