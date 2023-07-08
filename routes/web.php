@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home/{user}', [PostController::class, 'home']);
 Route::post('/posts',  [PostController::class, 'store']);
-Route::get('/posts/create',  [PostController::class, 'create']);
+Route::get('/posts/{user}/create',  [PostController::class, 'create']);
 Route::get('/posts/{post}',  [PostController::class, 'show']);
 Route::get('/posts/show', [PostController::class, 'index']);
 Route::put('/posts/{post}',  [PostController::class, 'update']);
@@ -26,5 +26,6 @@ Route::get('/posts/{post}/edit',  [PostController::class, 'edit']);
 Route::get('/categories/{category}', [CategoryController::class,'index']);
 Route::get('/', [UserController::class, 'create']);
 Route::get('/posts/show/{user}', [UserController::class, 'index']);
+Route::get('/posts/event/{user}', [UserController::class, 'show']);
 Route::post('/summer/date', [UserController::class, 'store_period']);
 

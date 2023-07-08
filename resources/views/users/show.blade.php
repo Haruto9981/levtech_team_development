@@ -8,15 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>詳細画面</h1>
-        <div>
-            <p>タイトル：{{ $post->title }}</p>
-            <p>本文：{{ $post->body }}</p>
-            <p>カテゴリー：<a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a></p>
+        <h1>行事表示</h1>
+        <div　class="content">
         </div>
         <div>
-            <p class="edit">[<a href="/posts/{{ $post->id }}/edit">編集</a>]</p>
-            <a href="/">戻る</a>
+            <a href="/posts/{{ $user->id }}/create">新規行事追加</a>
         </div>
     </body>
 </html>
