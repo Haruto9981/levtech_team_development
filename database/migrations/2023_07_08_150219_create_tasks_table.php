@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string('volume');
             $table->date('line');
             $table->date('deadline');
-            $table->string(achievement);
-            $table->foreignId('posts_id');
+            $table->string('achievement');
+            $table->foreignId('posts_id')->constrained();
             $table->timestamps();
+             $table->softDeletes();
         });
     }
 
