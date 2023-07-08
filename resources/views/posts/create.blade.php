@@ -29,6 +29,6 @@
             </div>
             <input type="submit" value="登録"/>
         </form>
-        <div><a href="/">戻る</a></div>
+        <div><a href="/home/{{ $user->id }}">戻る</a></div>
     </body>
 </html>
