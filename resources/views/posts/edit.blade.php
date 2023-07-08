@@ -10,13 +10,15 @@
             <form action="/posts/{{ $post->id }}" method="POST">
                 @csrf
                 @method('PUT')
-                <div class='content__title'>
+                <div>
                     <h2>タイトル</h2>
-                    <input type='text' name='post[title]' value="{{ $post->title }}">
+                    <input type="text" name="post[title]" placeholder="タイトル" value="{{ old('post.title') }}"/>
+                    <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
                 </div>
-                <div class='content__body'>
-                    <h2>本文</h2>
-                    <input type='text' name='post[body]' value="{{ $post->body }}">
+                <div>
+                    <h2>内容</h2>
+                    <textarea name="post[body]" placeholder="夏休みは何をしようかな">{{ old('post.body') }}</textarea>
+                    <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
                 </div>
                 <input type="submit" value="保存">
             </form>
