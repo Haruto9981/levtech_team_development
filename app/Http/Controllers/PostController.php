@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Category;
 
 class PostController extends Controller
 {
+    public function home(Post $post, User $user)
+    {
+        return view('posts/home')->with(['posts' => $post->getPaginateByLimit(), 'user' => $user]);
+    }
     public function index(Post $post)
     {
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
