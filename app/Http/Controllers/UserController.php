@@ -16,6 +16,11 @@ class UserController extends Controller{
     public function store_period(User $user, Request $request){
         $input = $request['user'];
         $user->fill($input)->save();
-        return redirect('/home'. $user->id);
+        return redirect('/home/'. $user->id);
+    }
+    
+    public function show(User $user)
+    {
+        return view('users/show')->with(['user' => $user]);
     }
 }

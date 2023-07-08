@@ -10,7 +10,7 @@
         <h1>ホーム</h1>
         <div class="content">
             <h2>{{ $user->name }}さんの夏休みの予定</h2>
-            <a href='/posts/show/{{ $user->id }}'>表示</a>
+            <a href='/posts/event/{{ $user->id }}'>表示</a>
         </div>
         <div class="content">
             <h2>今日の行事</h2>
