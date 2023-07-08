@@ -18,6 +18,7 @@ class UserController extends Controller{
         $user->fill($input)->save();
         return redirect('/home/'. $user->id);
     }
+
     public function show(User $user)
     {
         return view('users/show')->with(['user' => $user]);

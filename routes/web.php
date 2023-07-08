@@ -28,4 +28,3 @@ Route::get('/', [UserController::class, 'create']);
 Route::get('/posts/show/{user}', [UserController::class, 'index']);
 Route::get('/posts/event/{user}', [UserController::class, 'show']);
 Route::post('/summer/date', [UserController::class, 'store_period']);
-
