@@ -41,6 +41,6 @@ class TaskController extends Controller
         $task->save();
         session()->flash('flash_message', '達成おめでとう！');
         
-        return redirect('/posts/'. $user->id);
+        return redirect('/posts/'. $post->id);
     }
 }
