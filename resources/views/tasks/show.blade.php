@@ -30,7 +30,7 @@
                 <div class="text">
                     <label for="date2" class="col-form-label">日にちを入力</label>
                 </div>
-                <input type="date" class="date" id="date2" name="task[endline]">
+                <input type="date" class="date" id="date2" name="task[deadline]">
             </div>
             <div>
                 <input type="hidden" name="task[post_id]" value="{{ $post->id }}">

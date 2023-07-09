@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('volume');
             $table->date('line');
-            $table->date('deadline')->nullable();
+            $table->date('deadline');
             $table->boolean('achievement')->default(false);
             $table->foreignId('post_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
