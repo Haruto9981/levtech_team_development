@@ -8,4 +8,11 @@ body {
     margin-left: 50px;
     
 }
+p{
+    text-indent:2rem;
+}
 
+.small{
+    font-weight: normal;
+    line-height: 10px;
+}
