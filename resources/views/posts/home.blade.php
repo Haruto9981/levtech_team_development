@@ -42,5 +42,5 @@
             @csrf
             <input type="submit" value="ログアウト">
         </form>
-    </body>
+    </body> 
 </html>
