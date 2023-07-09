@@ -30,7 +30,7 @@ class TaskController extends Controller
         
         $input = $request['task'];
         $task->fill($input)->save();
-        return redirect('/home/'. $user->id);
+        return redirect('/posts/event/'. $user->id);
     }
     public function achievement(Request $request, User $user, Post $post, Task $task)
     {

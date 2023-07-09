@@ -20,7 +20,7 @@ class UserController extends Controller{
         }
         else 
         {
-            return redirect('/home/'. $user->id); 
+            return redirect('/home'); 
         }
     }
     
@@ -30,7 +30,7 @@ class UserController extends Controller{
         $user->period_end = $input['period_end'];
         $user->save();
         
-        return redirect('/home/'. $user->id);
+        return redirect('/home');
     }
 
     public function show(User $user, Post $post)

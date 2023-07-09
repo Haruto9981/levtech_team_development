@@ -12,11 +12,15 @@ class PostController extends Controller
 {
     public function home(Post $post, User $user)
     {
+        $user = Auth::user();
+        
         return view('posts/home')->with(['posts' => $user->getByPosts(), 'user' => $user]);
     }
-    public function index(Post $post)
+    public function index(Post $post, User $user)
     {
-        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+        $user = Auth::user();
+        
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit(), 'user' => $user]);
     }
 
     public function show(User $user, Post $post)
@@ -38,6 +42,7 @@ class PostController extends Controller
         $input = $request['post'];
         $post->title = $input['title'];
         $post->body = $input['body'];
+        $post->eventday = $input['eventday'];
         $post->user_id = $user->id;
         $post->save();
         
