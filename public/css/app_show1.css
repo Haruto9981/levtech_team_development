@@ -3,12 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 body {
-    text-align: center;
-    background-color: #97cdf3;
-    
-    
+    text-align: left;
+    margin-left: 50px;
 }
+
+
+
