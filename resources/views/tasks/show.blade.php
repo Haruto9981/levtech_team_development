@@ -17,12 +17,12 @@
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>
             <div>
-                <h2>開始日程</h2>
+                <h2>終わらせたい目標の日程</h2>
                 <div class="form-group">
                     <label for="date2" class="col-form-label">日にちを入力</label>
                     <input type="date" class="form-control" id="date2" name="task[line]">
                 </div>
-                <h2>締め切り日程</h2>
+                <h2>最終締め切りの日程</h2>
                 <div class="form-group">
                     <label for="date2" class="col-form-label">日にちを入力</label>
                     <input type="date" class="form-control" id="date2" name="task[endline]">

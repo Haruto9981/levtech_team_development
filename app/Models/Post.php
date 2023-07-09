@@ -12,7 +12,8 @@ class Post extends Model
     protected $fillable = [
         'title',
         'body',
-        'category_id',
+        'eventday',
+        'check',
     ];
 
     public function tasks()
