@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="{{ secure_asset('css/app_home.css') }}">
     </head>
     <body>
-        <h1>ホーム画面</h1>
         <div class="content">
             <h2>今日の行事</h2>
             <div>
@@ -26,7 +25,7 @@
             <a href='/posts/event/{{ $user->id }}'>表示</a>
         </div><br>
         <div class="content">
-            <h2>みんなの行事一覧</h2>
+            <h2>ほかの人の夏休みの過ごし方</h2>
             <a href='/posts/show'>表示</a>
         </div>
         <h2 class="endday">夏休みは{{ $user->period_end}}まで！</h2>
