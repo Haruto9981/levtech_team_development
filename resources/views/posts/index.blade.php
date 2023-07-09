@@ -15,8 +15,8 @@
                 @foreach ($posts as $post)
                     @if ($post->user_id !== $user->id)
                         @if ($post->check === 1)
-                        <h3>・{{ $post->title }}</h3>
-                        <h4>内容：{{ $post->body }}</h4>
+                        <h4 class="small">・{{ $post->title }}</h4>
+                        <p class="small">内容：{{ $post->body }}</p>
                         @endif
                     @endif
                 @endforeach
