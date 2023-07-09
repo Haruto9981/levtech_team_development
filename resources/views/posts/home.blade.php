@@ -27,7 +27,9 @@
             <a href='/posts/show'>他の人の夏休みの過ごし方</a>
         </div>
         <h2 class="endday">夏休みは<span class="period">{{ $user->period_end}}</span>まで！</h2>
-        <h2 class="endday">夏休み終了まで残り<span class="period">{{ $diff->m }}ヶ月{{ $diff->d }}日</span>！</h3>
+        @if($diff->m === 0 && $diff->d ===0)<h2 class="endday">夏休み終了！</h2>
+        @else<h2 class="endday">夏休み終了まで残り<span class="period">{{ $diff->m }}ヶ月{{ $diff->d }}日</span>！</h3>
+        @endif
         <form action="{{ route('logout') }}" method="post">
             @csrf
             <input type="submit" value="ログアウト">

@@ -7,6 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/app_create.css') }}">
     </head>
     <body>
         @if (session('flash_message'))
@@ -15,7 +16,7 @@
             </div>
         @endif
         <h1>{{ $post->title }}</h1>
-            <div　class="content">
+            <div class="content">
             <h2>残っているタスク</h2>
                 @foreach ($tasks as $task)
                     @if ($task->achievement == 0)
