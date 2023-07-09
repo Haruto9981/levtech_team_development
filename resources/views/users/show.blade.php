@@ -31,8 +31,8 @@
             <div>
              @foreach ($posts as $post)
              　 @if ( new DateTime($post->eventday) < $datetime)
-                  <h3>・{{ $post->title }}</h3>
-                  <h4>{{ $post->body }}</h4>
+                  <h4 class="small">・{{ $post->title }}</h4>
+                  <p class="small">{{ $post->body }}</hp>
                 @endif
             @endforeach
             </div>
