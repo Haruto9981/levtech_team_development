@@ -15,6 +15,24 @@ body {
     
 }
 
+a { 
+    font-size:150%;
+    font-weight: bold;
+    text-decoration: none; 
+}
+a:link{
+    color:black;
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color:blue;
+}
+a:active{
+    color:black;
+}
+
 .col-form-label {
     
 }

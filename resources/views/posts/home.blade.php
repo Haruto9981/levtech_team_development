@@ -21,12 +21,10 @@
             </div>
         </div><br>
         <div class="content">
-            <h2>{{ $user->name }}さんの夏休みの予定</h2>
-            <a href='/posts/event/{{ $user->id }}'>表示</a>
+            <a href='/posts/event/{{ $user->id }}'>{{ $user->name }}さんの夏休みの予定</a>
         </div><br>
         <div class="content">
-            <h2>ほかの人の夏休みの過ごし方</h2>
-            <a href='/posts/show'>表示</a>
+            <a href='/posts/show'>他の人の夏休みの過ごし方</a>
         </div>
         <h2 class="endday">夏休みは<span class="period">{{ $user->period_end}}</span>まで！</h2>
         <h2 class="endday">夏休み終了まで残り<span class="period">{{ $diff->m }}ヶ月{{ $diff->d }}日</span>！</h3>
