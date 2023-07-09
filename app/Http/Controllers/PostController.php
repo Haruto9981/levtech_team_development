@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use DateTime;
 
 class PostController extends Controller
 {
@@ -14,7 +15,10 @@ class PostController extends Controller
     {
         $user = Auth::user();
         
-        return view('posts/home')->with(['posts' => $user->getByPosts(), 'user' => $user]);
+        $datetime = new DateTime($user->period_end);
+        $current  = new DateTime('now');
+        $diff     = $current->diff($datetime);
+        return view('posts/home')->with(['posts' => $user->getByPosts(), 'user' => $user , 'diff' => $diff]);
     }
     public function index(Post $post, User $user)
     {

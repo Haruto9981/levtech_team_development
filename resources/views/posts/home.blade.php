@@ -26,6 +26,8 @@
             @endforeach
             </div>
         </div><br>
+        <h2>夏休みは{{ $user->period_end}}まで</h2>
+        <h2>残り{{ $diff->m }}ヶ月{{ $diff->d }}日</h2>
         <div class="content">
             <h2>ビジターの行事</h2>
             <a href='/posts/show'>表示</a>
