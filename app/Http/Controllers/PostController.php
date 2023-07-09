@@ -60,6 +60,8 @@ class PostController extends Controller
 
     public function update(Request $request, Post $post)
     {
+        $user = Auth::user();
+        
         $input_post = $request['post'];
         $post->fill($input_post)->save();
 
