@@ -40,6 +40,6 @@ class TaskController extends Controller
         $task->achievement = $input['achievement'];
         $task->save();
         
-        return redirect('/tasks/'. $user->id);
+        return redirect('/posts/'. $user->id);
     }
 }

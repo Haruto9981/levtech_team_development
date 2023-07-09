@@ -7,33 +7,37 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/app_create.css') }}">
     </head>
     <body>
         <h1>{{ $post->title }}</h1>
         <form action="/tasks" method="POST">
             @csrf
-            <div>
+            <div class="content">
                 <h2>やらなければならないこと！</h2>
-                <input type="text" name="task[volume]" placeholder="準備、具体的な課題など" value="{{ old('post.title') }}"/>
+                <input type="text" class="title" name="task[volume]" placeholder="準備、具体的な課題など" value="{{ old('post.title') }}"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>
-            <div>
+            <div class="content">
                 <h2>終わらせたい目標の日程</h2>
-                <div class="form-group">
+                <div class="text">
                     <label for="date2" class="col-form-label">日にちを入力</label>
-                    <input type="date" class="form-control" id="date2" name="task[line]">
                 </div>
+                <input type="date" class="date" id="date2" name="task[line]">
+            </div>
+            <div class="content">
                 <h2>最終締め切りの日程</h2>
-                <div class="form-group">
+                <div class="text">
                     <label for="date2" class="col-form-label">日にちを入力</label>
-                    <input type="date" class="form-control" id="date2" name="task[endline]">
                 </div>
-                
+                <input type="date" class="date" id="date2" name="task[endline]">
             </div>
             <div>
                 <input type="hidden" name="task[post_id]" value="{{ $post->id }}">
             </div>
-            <input type="submit" value="登録"/>
+            <div class="content">
+                <input class="button" type="submit" value="登録"/>
+            </div>
         </form>
     </body>
 </html>
