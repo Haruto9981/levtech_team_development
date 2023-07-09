@@ -39,7 +39,8 @@ class TaskController extends Controller
         $input = $request['task'];
         $task->achievement = $input['achievement'];
         $task->save();
+        session()->flash('flash_message', '達成おめでとう！');
         
-        return redirect('/tasks/'. $user->id);
+        return redirect('/posts/'. $user->id);
     }
 }
