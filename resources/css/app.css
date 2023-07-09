@@ -1,9 +1,0 @@
-@charset "utf-8";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-h1 {
-    color: red;
-}

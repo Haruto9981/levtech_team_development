@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title', 50);
             $table->string('body', 200);
             $table->date('eventday');
+            $table->boolean('check')->default(false);
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
             $table->softDeletes();

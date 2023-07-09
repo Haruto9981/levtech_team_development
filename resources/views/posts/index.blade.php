@@ -12,8 +12,12 @@
         <h1>ほかの人の夏休みの過ごし方</h1>
             <div　class="content">
                 @foreach ($posts as $post)
-                    <h3>・{{ $post->title }}</h3>
-                    <h4>内容：{{ $post->body }}</h4>
+                    @if ($post->user_id !== $user->id)
+                        @if ($post->check === 1)
+                        <h3>・{{ $post->title }}</h3>
+                        <h4>内容：{{ $post->body }}</h4>
+                        @endif
+                    @endif
                 @endforeach
         <div>
             <a href="/home">ホームへ</a>

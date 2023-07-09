@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\User;
@@ -39,7 +40,7 @@ class PostController extends Controller
         return view('posts/create')->with(['user' => $user]);
     }
 
-    public function store(Post $post, Request $request)
+    public function store(Post $post, PostRequest $request)
     {
         $user = Auth::user();
         
@@ -47,6 +48,7 @@ class PostController extends Controller
         $post->title = $input['title'];
         $post->body = $input['body'];
         $post->eventday = $input['eventday'];
+        $post->check = $input['check'];
         $post->user_id = $user->id;
         $post->save();
         
@@ -60,6 +62,8 @@ class PostController extends Controller
 
     public function update(Request $request, Post $post)
     {
+        $user = Auth::user();
+        
         $input_post = $request['post'];
         $post->fill($input_post)->save();
 

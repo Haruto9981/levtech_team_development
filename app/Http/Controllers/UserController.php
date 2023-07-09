@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Task;
+use Datetime;
 
 class UserController extends Controller{
 
@@ -35,6 +36,9 @@ class UserController extends Controller{
 
     public function show(User $user, Post $post)
     {
-        return view('users/show')->with(['user' => $user, 'posts' => $user->getByPosts()]);
+        $dateTime = new Datetime('now');
+        $dateTime->format('Y-m-d');
+        
+        return view('users/show')->with(['user' => $user, 'posts' => $user->getByPosts(), 'datetime' => $dateTime]);
     }
 }
