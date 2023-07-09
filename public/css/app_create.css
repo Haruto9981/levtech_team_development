@@ -1,0 +1,85 @@
+@charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content {
+    text-align: left;
+    padding: 15px 100px;
+    font-size: 15px;
+}
+
+.button {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.title {
+    text-align: left;
+    line-height:1.5;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+.textarea {
+    text-align: left;
+    line-height:1.5;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.date {
+    text-align: left;
+    line-height:1.5;
+    width: 20%;
+    font-size: 1.5em;
+}
+
+.text {
+    text-align: left;
+    font-size: 20px
+}
+
+.radiobutton {
+    block-size: 1.0rem;
+    inline-size: 1.0rem;
+}
+
+.FlexTextarea {
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1.0;
+}
+
+.FlexTextarea__dummy {
+  text-align: left;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 5px 15px;
+  min-height: 120px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 1px solid;
+}
+
+.FlexTextarea__textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  width: 80%;
+  height: 100%;
+
+  font: inherit;
+  letter-spacing: inherit;
+  resize: none;
+}
+
+.FlexTextarea__textarea:focus {
+  box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+  outline: 0;
+}
