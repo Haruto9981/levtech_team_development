@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+a{
+    font-size:150%;
+    font-weight: bold;
+}
+
 .content {
     text-align: left;
     padding: 15px 100px;
