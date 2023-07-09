@@ -6,6 +6,7 @@
         <title>Blog</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
     </head>
     <body>
         <h1>ほかの人の夏休みの過ごし方</h1>
