@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
     </head>
     <body>
+        @if (session('flash_message'))
+            <div class="flash_message bg-success text-center py-3 my-0">
+                {{ session('flash_message') }}
+            </div>
+        @endif
         <h1>{{ $post->title }}</h1>
             <div　class="content">
             <h2>残っているタスク</h2>

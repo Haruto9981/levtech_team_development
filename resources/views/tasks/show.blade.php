@@ -14,7 +14,7 @@
         <form action="/tasks" method="POST">
             @csrf
             <div class="content">
-                <h2>やらなければならないこと！</h2>
+                <h2>タスク名</h2>
                 <input type="text" class="title" name="task[volume]" placeholder="準備、具体的な課題など" value="{{ old('post.title') }}"/>
                 <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>

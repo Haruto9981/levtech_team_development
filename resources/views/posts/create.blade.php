@@ -24,8 +24,9 @@
                     <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
                 </div>
             </div>
+            
             <div class="content">
-                <h2>日程</h2>
+                <h2>実行日程</h2>
                 <div class="text">
                     <label for="date2" class="col-form-label">日にちを入力</label>
                 </div>

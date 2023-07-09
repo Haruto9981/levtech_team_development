@@ -1,0 +1,11 @@
+@charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    text-align: left;
+    margin-left: 50px;
+    
+}
+

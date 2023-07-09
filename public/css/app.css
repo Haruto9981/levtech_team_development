@@ -10,10 +10,29 @@
 
 body {
     text-align: center;
-    background-color: #97cdf3;
+    background-color: #DDFFFF;
     
     
 }
+
+a { 
+    font-size:150%;
+    font-weight: bold;
+    text-decoration: none; 
+}
+a:link{
+    color:black;
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color:blue;
+}
+a:active{
+    color:black;
+}
+.flash_message{ color: red; }
 
 .col-form-label {
     

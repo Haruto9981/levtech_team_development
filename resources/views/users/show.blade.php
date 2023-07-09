@@ -7,6 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/app_show1.css') }}">
     </head>
     <body>
         <h1>行事表示</h1>
@@ -15,9 +16,8 @@
             <div>
             @foreach ($posts as $post)
                  @if ( new DateTime($post->eventday) <= $datetime)
-                <h3>・{{ $post->title }}</h3>
+                <a href="/posts/{{ $post->id }}">・{{ $post->title }}</a>
                 <h4>{{ $post->body }}</h4>
-                <a href="/posts/{{ $post->id }}">やるべきタスク</a><br>
                 <a href="/posts/{{ $post->id }}/edit">編集</a>
                 <form action="/posts/event/{{ $user->id }}/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                     @csrf
