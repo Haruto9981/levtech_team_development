@@ -31,8 +31,9 @@ class PostController extends Controller
     public function show(User $user, Post $post)
     {
         $user = Auth::user();
+        $dateTime = new Datetime('now');
         
-        return view('posts/show')->with(['post' => $post, 'user' => $user, 'tasks' => $post->getByTasks()]);
+        return view('posts/show')->with(['post' => $post, 'user' => $user, 'tasks' => $post->getByTasks(), 'datetime' => $dateTime]);
     }
 
     public function create(User $user)
