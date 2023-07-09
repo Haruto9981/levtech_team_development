@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 
-h1 {
-    color: red;
+
+
+body {
+    text-align: center;
+    background-color: #97cdf3;
+    
 }
