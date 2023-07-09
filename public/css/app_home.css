@@ -1,0 +1,14 @@
+@charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content {
+    text-align: left;
+    padding: 15px 100px;
+    font-size: 15px;
+}
+
+.endday {
+    font-size: 40px;
+}
