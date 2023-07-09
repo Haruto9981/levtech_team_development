@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 50);
             $table->string('body', 200);
+            $table->date('eventday');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
             $table->softDeletes();

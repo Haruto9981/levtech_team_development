@@ -30,7 +30,7 @@
             <a href="/posts/{{ $user->id }}/create">新規行事追加</a>
         </div>
         <div>
-            <a href="/home/{{ $user->id }}">ホームへ</a>
+            <a href="/home">ホームへ</a>
         </div>
         <script>
             function deletePost(id) {

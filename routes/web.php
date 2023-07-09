@@ -29,15 +29,15 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [UserController::class, 'create']);
-    Route::get('/home/{user}', [PostController::class, 'home']);
+    Route::get('/home', [PostController::class, 'home'])->name('home');
     Route::post('/posts',  [PostController::class, 'store']);
+    Route::get('/posts/show', [PostController::class, 'index']);
     Route::get('/posts/{user}/create',  [PostController::class, 'create']);
     Route::get('/posts/event/{user}', [UserController::class, 'show']);
     Route::get('/posts/{post}/edit',  [PostController::class, 'edit']);
     Route::get('/posts/{post}',  [PostController::class, 'show']);
     Route::put('/posts/{post}',  [PostController::class, 'update']);
     Route::delete('/posts/event/{user}/{post}',  [PostController::class, 'delete']);
-    Route::get('/posts/show', [PostController::class, 'index']);
     Route::get('/posts/show/{user}', [UserController::class, 'index']);
     Route::get('/create', [UserController::class, 'create']);
     Route::put('/create/{user}', [UserController::class, 'store_period']);

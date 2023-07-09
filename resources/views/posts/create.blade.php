@@ -18,10 +18,17 @@
                 <textarea name="post[body]" placeholder="夏休みは何をしようかな">{{ old('post.body') }}</textarea>
                 <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
+            <div>
+                <h2>日程</h2>
+                <div class="form-group">
+                    <label for="date2" class="col-form-label">日にちを入力</label>
+                    <input type="date" class="form-control" id="date2" name="post[eventday]">
+                </div>
+            </div>
             <input type="submit" value="登録"/>
         </form>
         <div>
-            <a href="/home/{{ $user->id }}">ホームへ</a>
+            <a href="/home">ホームへ</a>
         </div>
     </body>
 </html>

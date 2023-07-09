@@ -37,7 +37,7 @@
             <a href="/tasks/{{ $user->id }}/{{ $post->id }}">新規タスク追加</a>
         </div>
         <div>
-            <a href="/home/{{ $user->id }}">ホームへ</a>
+            <a href="/home">ホームへ</a>
         </div>
     </body>
 </html>
