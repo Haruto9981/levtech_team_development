@@ -11,10 +11,6 @@
     <body>
         <h1>ホーム画面</h1>
         <div class="content">
-            <h2>{{ $user->name }}さんの夏休みの予定</h2>
-            <a href='/posts/event/{{ $user->id }}'>表示</a>
-        </div><br>
-        <div class="content">
             <h2>今日の行事</h2>
             <div>
             @foreach ($posts as $post)
@@ -26,7 +22,11 @@
             </div>
         </div><br>
         <div class="content">
-            <h2>ビジターの行事</h2>
+            <h2>{{ $user->name }}さんの夏休みの予定</h2>
+            <a href='/posts/event/{{ $user->id }}'>表示</a>
+        </div><br>
+        <div class="content">
+            <h2>みんなの行事一覧</h2>
             <a href='/posts/show'>表示</a>
         </div>
         <h2 class="endday">夏休みは{{ $user->period_end}}まで！</h2>
