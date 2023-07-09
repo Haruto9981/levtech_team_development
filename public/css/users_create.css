@@ -1,0 +1,27 @@
+@charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.center{
+    text-align: center; 
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.big{
+    font-size: 40px;
+}
+
+.small{
+    font-size: 15px;
+}
+
+
+
