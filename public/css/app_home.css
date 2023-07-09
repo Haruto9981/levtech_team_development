@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+a{
+    font-size: 150%;
+    font-weight: bold;
+}
+
 .content {
     text-align: left;
     padding: 15px 100px;
@@ -19,4 +24,13 @@
 
 .endday {
     font-size: 40px;
+}
+
+.article {
+    display: flex;
+}
+
+.content2 {
+    padding-left: 150px;
+    padding-top: 40px;
 }
