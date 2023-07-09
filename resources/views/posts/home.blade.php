@@ -14,8 +14,8 @@
             <div>
             @foreach ($posts as $post)
                 @if( \Carbon\Carbon::now()->format("Y-m-d")  ===  $post->eventday )
-                    <h3>・{{ $post->title }}</h3>
-                    <h4>内容：{{ $post->body }}</h4>
+                    <h3 class="text">・{{ $post->title }}</h3>
+                    <h4 class="text">内容：{{ $post->body }}</h4>
                 @endif
             @endforeach
             </div>

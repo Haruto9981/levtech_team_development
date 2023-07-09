@@ -9,6 +9,10 @@
     font-size: 15px;
 }
 
+.text{
+    font-weight: normal
+}
+
 .endday {
     font-size: 40px;
 }
