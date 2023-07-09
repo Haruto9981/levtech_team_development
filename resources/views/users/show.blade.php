@@ -15,6 +15,7 @@
             <h2>残っている行事</h2>
             <div>
             @foreach ($posts as $post)
+                 @if ( new DateTime($post->eventday) <= $datetime)
                 <h3>・{{ $post->title }}</h3>
                 <h4>{{ $post->body }}</h4>
                 <a href="/posts/{{ $post->id }}">やるべきタスク</a><br>
@@ -24,9 +25,16 @@
                     @method('DELETE')
                     <button type="button" onclick="deletePost({{ $post->id }})">delete</button>
                 </form>
+                @endif
             @endforeach
             </div>
             <h2>終わった行事</h2>
+             @foreach ($posts as $post)
+             　 @if ( new DateTime($post->eventday) > $datetime)
+                <h3>・{{ $post->title }}</h3>
+                <h4>{{ $post->body }}</h4>
+                @endif
+            @endforeach
         </div>
         <div>
             <a href="/posts/{{ $user->id }}/create">新規行事追加</a>

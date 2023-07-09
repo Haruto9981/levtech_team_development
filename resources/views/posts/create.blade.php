@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>やること登録！</h1>
-        <form action="/posts" method="POST">
+        <form action="/posts/{{ $user->id }}/create" method="POST">
             @csrf
             <div>
                 <h2>タイトル</h2>
@@ -20,11 +20,15 @@
                 <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
             </div>
             <div>
-                <h2>日程</h2>
+                <h2>実行日程</h2>
                 <div class="form-group">
                     <label for="date2" class="col-form-label">日にちを入力</label>
                     <input type="date" class="form-control" id="date2" name="post[eventday]">
                 </div>
+                <h2>公表してもいい？</h2>
+                いいよ！<input type="radio" id="radio01" name="post[check]" value="1">
+                ダメ！<input type="radio" id="radio02" name="post[check]" value="0">
+                <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
             </div>
             <input type="submit" value="登録"/>
         </form>

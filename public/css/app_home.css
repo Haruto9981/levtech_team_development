@@ -9,6 +9,14 @@
     font-size: 15px;
 }
 
+.text{
+    font-weight: normal
+}
+
+.period{
+    color:red;
+}
+
 .endday {
     font-size: 40px;
 }

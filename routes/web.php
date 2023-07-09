@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [UserController::class, 'create']);
     Route::get('/home', [PostController::class, 'home'])->name('home');
-    Route::post('/posts',  [PostController::class, 'store']);
     Route::get('/posts/show', [PostController::class, 'index']);
+    Route::post('/posts/{user}/create',  [PostController::class, 'store']);
     Route::get('/posts/{user}/create',  [PostController::class, 'create']);
     Route::get('/posts/event/{user}', [UserController::class, 'show']);
     Route::get('/posts/{post}/edit',  [PostController::class, 'edit']);
