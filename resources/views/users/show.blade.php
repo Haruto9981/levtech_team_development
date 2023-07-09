@@ -15,7 +15,7 @@
             <h2>残っている行事</h2>
             <div>
             @foreach ($posts as $post)
-                 @if ( new DateTime($post->eventday) <= $datetime)
+                 @if ( new DateTime($post->eventday) >= $datetime)
                 <a href="/posts/{{ $post->id }}">・{{ $post->title }}</a>
                 <p class="small">{{ $post->body }}</p>
                 <a href="/posts/{{ $post->id }}/edit">編集</a>
@@ -30,9 +30,9 @@
             <h2>終わった行事</h2>
             <div>
              @foreach ($posts as $post)
-             　 @if ( new DateTime($post->eventday) > $datetime)
-                <h4 class="small">・{{ $post->title }}</h4>
-                <p class="small">{{ $post->body }}</p>
+             　 @if ( new DateTime($post->eventday) < $datetime)
+                  <h3>・{{ $post->title }}</h3>
+                  <h4>{{ $post->body }}</h4>
                 @endif
             @endforeach
             </div>

@@ -24,7 +24,9 @@
                             <form action="/tasks/{{ $post->id }}/{{ $task->id }}/achievement" method="POST">
                             @csrf
                             @method('put')
-                                ・{{ $task->volume }}
+                                ・{{ $task->volume }}<br>
+                                <a type="text">タスク終了目標期限日：残り{{ $datetime->diff(new DateTime($task->line))->m }}ヶ月{{ $datetime->diff(new DateTime($task->line))->d }}日</a><br>
+                                <a type="text">タスク終了厳守期限日：残り{{ $datetime->diff(new DateTime($task->deadline))->m }}ヶ月{{ $datetime->diff(new DateTime($task->deadline))->d }}日</a>
                                 <input type="hidden" name="task[achievement]" value="1">
                                 <input type="submit" value="達成"/>
                             </form>
